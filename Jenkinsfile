@@ -18,6 +18,8 @@ pipeline {
                     sh '''
                         aws --version
                         aws s3 ls
+                        echo "Hello S3!" >index.html
+                        aws s3 cp index.txt s3://aws-20250322paula/index.html
                     '''
                 }
             }
